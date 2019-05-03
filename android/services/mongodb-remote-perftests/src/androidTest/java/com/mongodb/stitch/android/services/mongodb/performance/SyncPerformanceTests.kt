@@ -30,7 +30,7 @@ class SyncPerformanceTests {
 
     /*
      * Before: Perform local insert of numDoc documents, configure sync(),
-     *              perform sync pass, disconnect networkMonitor
+     *            perform sync pass, disconnect networkMonitor
      * Test: Reconnect the network monitor and perform sync pass
      * After: Ensure that the sync pass worked as expected
      */

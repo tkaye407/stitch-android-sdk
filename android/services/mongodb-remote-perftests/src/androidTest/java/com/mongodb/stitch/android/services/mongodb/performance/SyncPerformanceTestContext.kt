@@ -34,9 +34,6 @@ abstract class SyncPerformanceTestContext(
     val testDataSynchronizer: DataSynchronizer
         get() = (testMongoClient as RemoteMongoClientImpl).dataSynchronizer
 
-    companion object {
-        val TAG = SyncPerformanceTestContext::class.java.simpleName
-    }
 
     abstract fun setup()
     abstract fun teardown()

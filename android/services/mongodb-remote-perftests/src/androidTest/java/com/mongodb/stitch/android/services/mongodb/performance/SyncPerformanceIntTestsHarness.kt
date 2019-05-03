@@ -240,7 +240,7 @@ data class FailureResult(
     }
 }
 
-private class DataBlock(data: DoubleArray, numOutliers: Int) {
+class DataBlock(data: DoubleArray, numOutliers: Int) {
     var mean = 0.0
     var median = 0.0
     var min = 0.0

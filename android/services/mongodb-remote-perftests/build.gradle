@@ -4,6 +4,8 @@ apply plugin: 'digital.wup.android-maven-publish'
 apply plugin: 'jacoco-android'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
 
 buildscript {
     dependencies {
@@ -12,6 +14,7 @@ buildscript {
         classpath 'com.dicedmelon.gradle:jacoco-android:0.1.4'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}"
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
+        classpath "io.realm:realm-gradle-plugin:5.11.0"
     }
 }
 
