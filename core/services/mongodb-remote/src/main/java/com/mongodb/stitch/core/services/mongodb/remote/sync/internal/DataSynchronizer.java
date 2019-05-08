@@ -658,6 +658,7 @@ public class DataSynchronizer implements NetworkMonitor.StateListener {
    * @return whether or not the synchronization pass was successful.
    */
   public boolean doSyncPass() {
+    logger.debug("TKAPP: CALLING DO SYNC PASS");
     if (!this.isConfigured || !syncLock.tryLock()) {
       return false;
     }
@@ -671,6 +672,7 @@ public class DataSynchronizer implements NetworkMonitor.StateListener {
       logicalT++;
 
       if (this.shouldAttemptRecovery) {
+        logger.debug("TKAPP: in doSyncPass()::shouldAttemptRecovery");
         shouldAttemptRecovery = false;
         if (logger.isInfoEnabled()) {
           logger.info(String.format(
